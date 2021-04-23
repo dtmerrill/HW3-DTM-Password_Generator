@@ -72,6 +72,14 @@ header {
   clear: both;
 }
 
+.form {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: .5rem;
+  column-gap: 2rem;
+  justify-content: left;
+
+}
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
