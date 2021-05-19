@@ -72,14 +72,6 @@ header {
   clear: both;
 }
 
-.form {
-  display: grid;
-  grid-template-columns: auto auto;
-  row-gap: .5rem;
-  column-gap: 2rem;
-  justify-content: left;
-
-}
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -95,9 +87,7 @@ header {
   text-align: center;
   cursor: pointer;
 }
-.btn:hover {
-  background-color: #a30e0e80;
-}
+
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
