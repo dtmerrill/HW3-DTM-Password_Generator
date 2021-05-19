@@ -25,7 +25,20 @@ function getPasswordOptions() {
   var hasLowerChar = confirm("Would you like to use lowercase characters? (Click Okay)")
   var hasUpperChar = confirm("Would you like to use uppercase characters? (Click Okay)")
 }
+function generatePassword(hasSpecialChar, hasNumberChar, hasLowerChar, hasUpperChar) {
+      if (hasSpecialChar) yes = pwCharacters.concat(hasSpecialChar)
+      if (hasNumberChar) yes = pwCharacters.concat(hasNumberChar)
+      if (hasLowerChar) yes = pwCharacters.concat(hasLowerChar)
+      if (hasUpperChar) yes = pwCharacters.concat(hasUpperChar)
 
+
+      
+      const pwCharacters = []
+      for (let i = 0; i < getLength; i++) {
+          const characterCode = charCodes[Math.floor(Math.random() * getLength)]
+          pwCharacters.push(String.fromCharCode(characterCode))
+      }
+  }
 var generateBtn = document.querySelector("#generate");
 
 
