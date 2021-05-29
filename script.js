@@ -21,34 +21,79 @@ function getPasswordOptions() {
     return null
   }
   var hasSpecialChar = confirm("Would you like to use special characters? (Click Okay)"); 
-      if (hasSpecialChar == true) {
-        alert("Special Characters will be included."),
-      }    
-      else {
-        alert("That's a no to special characters.")
-      }
+      // if (hasSpecialChar == true) {
+      //   alert("Special Characters will be included."),
+      // }    
+      // else {
+      //   alert("That's a no to special characters.")
+      // }
   
   var hasNumberChar = confirm("Would you like to use numbers? (Click Okay)")
   var hasLowerChar = confirm("Would you like to use lowercase characters? (Click Okay)")
   var hasUpperChar = confirm("Would you like to use uppercase characters? (Click Okay)")
+
+  var getPasswordOptions = {
+    getLength: getLength, hasSpecialChar: hasSpecialChar, hasNumberChar: hasNumberChar, hasLowerChar: hasLowerChar, hasUpperChar: hasUpperChar 
+  }
+return getPasswordOptions;
 }
-function testing() {
-  if (hasSpecialChar == true) {
-    console.log(specialChar)
+function getRandom(arr) {
+  var randomIndex = Math.floor(Math.random() * arr.getLength)
+  var randomElement = arr[randomIndex]
+  return randomElement
+}
+function generatePassword() {
+  var passwordOptions = getPasswordOptions()
+  var results = []
+  var possibleCharacters = []
+  var guaranteedCharacters = []
+  
+  if (passwordOptions.hasSpecialChar) {
+    possibleCharacters = possibleCharacters.concat(specialChar)
+    guaranteedCharacters.push(getRandom(specialChar))
   }
+  if (passwordOptions.hasNumberChar) {
+    possibleCharacters = possibleCharacters.concat(numberChar)
+    guaranteedCharacters.push(getRandom(numberChar))
+  }
+  if (passwordOptions.hasLowerChar) {
+    possibleCharacters = possibleCharacters.concat(lowerChar)
+    guaranteedCharacters.push(getRandom(lowerChar))
+  }
+  if (passwordOptions.hasUpperChar) {
+    possibleCharacters = possibleCharacters.concat(upperChar)
+    guaranteedCharacters.push(getRandom(upperChar))
+  }
+  
+  for (let i = 0; i < passwordOptions.length; i++) {
+    var possibleCharacter = getRandom(possibleCharacters)
+    results.push (possibleCharacter)    
+  }
+  for (let i = 0; i < guaranteedCharacters.length; i++) {
+    results[i] = guaranteedCharacters[i]
 
-  if (hasNumberChar == true) {
-    console.log(numberChar)
+    
   }
+  return results.join("")
+}
 
-  if (hasLowerChar == true) {
-    console.log(lowerChar)
-  }
+// function testing() {
+//   if (hasSpecialChar == true) {
+//     console.log(specialChar)
+//   }
 
-  if (hasUpperChar == true) {
-    console.log(upperChar)
-  }
-};
+//   if (hasNumberChar == true) {
+//     console.log(numberChar)
+//   }
+
+//   if (hasLowerChar == true) {
+//     console.log(lowerChar)
+//   }
+
+//   if (hasUpperChar == true) {
+//     console.log(upperChar)
+//   }
+// };
 var generateBtn = document.querySelector("#generate");
 
 
@@ -93,5 +138,3 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-getPasswordOptions();
-testing();
