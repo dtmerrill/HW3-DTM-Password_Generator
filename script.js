@@ -29,60 +29,49 @@ function getPasswordOptions() {
 return pwOptions;
 }
 function getRandom(arr) {
-  console.log(arr)
+  // console.log(arr)
   var randomIndex = Math.floor(Math.random() * arr.length)
-  console.log(randomIndex)
   var randomElement = arr[randomIndex]
-  console.log(randomElement)
   return randomElement
 }
 function generatePassword() {
   var passwordOptions = getPasswordOptions()
-  console.log(passwordOptions)
+  // console.log(passwordOptions)
   var results = []
   var possibleCharacters = []
-  // var guaranteedCharacters = []
+  var guaranteedCharacters = []
   
   if (passwordOptions.hasSpecialChar) {
     possibleCharacters = possibleCharacters.concat(specialChar)
-    // console.log(possibleCharacters)
-    // guaranteedCharacters.push(getRandom(specialChar))
+    guaranteedCharacters.push(getRandom(specialChar))
   }
   if (passwordOptions.hasNumberChar) {
     possibleCharacters = possibleCharacters.concat(numberChar)
-    // console.log(possibleCharacters)
-    // guaranteedCharacters.push(getRandom(numberChar))
+    guaranteedCharacters.push(getRandom(numberChar))
   }
   if (passwordOptions.hasLowerChar) {
     possibleCharacters = possibleCharacters.concat(lowerChar)
-    // console.log(possibleCharacters)
-    // guaranteedCharacters.push(getRandom(lowerChar))
+    guaranteedCharacters.push(getRandom(lowerChar))
   }
   if (passwordOptions.hasUpperChar) {
     possibleCharacters = possibleCharacters.concat(upperChar)
-    // console.log(possibleCharacters)
-    // guaranteedCharacters.push(getRandom(upperChar))
+    guaranteedCharacters.push(getRandom(upperChar))
   }
-  console.log(passwordOptions.getLength)
+  // console.log(passwordOptions.getLength)
   for (let i = 0; i < passwordOptions.getLength; i++) {
     var possibleCharacter = getRandom(possibleCharacters)
     results.push(possibleCharacter)
-    console.log("running")   
   }
-  // for (let i = 0; i < guaranteedCharacters.length; i++) {
-  //   results[i] = guaranteedCharacters[i]
-  // }
-  console.log(results)
+  for (let i = 0; i < guaranteedCharacters.length; i++) {
+    results[i] = guaranteedCharacters[i]
+  }
+  // console.log(results)
 
   return results.join("") 
 }
 
-
-
 var generateBtn = document.querySelector("#generate");
 
-
-// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -91,7 +80,4 @@ function writePassword() {
 
 }
 
-
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
