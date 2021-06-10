@@ -1,92 +1,66 @@
-# 03 JavaScript: Password Generator
+# Quick and Easy Password Generator
 
-## Your Task
+# Why, What and How is it?
 
-This week’s homework requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
+## Why?
+Based on a need to streamline and simplify our lives while at the same time increasing the complexity of our digital footprint, steps must be taken (get it, 'footprint'/'steps'?) to make access to that complexity both challenging to others to figure out and easy for us to apply.
 
-## User Story
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+## What?
+This release helps you to create an unpatterned (therefore, unpredictable) password while allowing you to define what criteria to apply to it. These criteria include:
+- Length (between 8-128 characters)
+Types of Characters:
+- Numbers
+- Special Characters
+- Lowercase Characters
+- Uppercase Characters
 
-## Acceptance Criteria
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+## How?
+A very lightweight and simple combination of html/css/js combined with a straightforward alert-driven question/response interface with the ability to generate as many different versions as you want and copy/paste the ones you want, directly addresses the 'simplicity' requirement noted in the Why section above.
 
-## Mock-Up
 
-The following image shows the web application's appearance and functionality:
+## What else do I need to know?
+Thanks for asking! Something helpful built into this generator is a collection of feedback alerts associated with the "password length" request. If the entry does not meet the criteria (too short, too long, nothing or not a number), clarification alerts appear and bring you back to the start page. Overall, this meets the need for the simple complex life. Cheers!
+
+## Installation
+Great news! Simply launch the page associated with the repo to view and use this code:
+
+Repo:  https://github.com/dtmerrill/HW3-DTM-Password_Generator
+
+Deployed Page:  https://dtmerrill.github.io/HW3-DTM-Password_Generator/
+
+## Usage
+
+Just click the big, red "Generate Password" button to start on the path.
 
 ![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
 
-## Grading Requirements
 
-This homework is graded based on the following criteria: 
 
-### Technical Acceptance Criteria: 40%
+## Credits
+I worked on this with some base code from my Boot Camp (Trilogy Education Services) but the cool stuff is mine.
 
-* Satisfies all of the preceding acceptance criteria plus the following:
+## License
+MIT License
 
-  * The homework should not produce any errors in the console when you inspect it using Chrome DevTools.
+Copyright (c) [2021] [Dana T Merrill]
 
-### Deployment: 32%
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-* Application deployed at live URL.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
